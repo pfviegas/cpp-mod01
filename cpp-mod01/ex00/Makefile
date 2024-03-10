@@ -6,7 +6,7 @@
 #    By: paulo <paulo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/04 11:39:39 by pviegas           #+#    #+#              #
-#    Updated: 2024/03/07 11:35:47 by paulo            ###   ########.fr        #
+#    Updated: 2024/03/08 12:33:14 by paulo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ clean:
 	@echo "\n$(RED) [Deleting] .o files ... (deleted)$(RESET)\n\n"
 
 fclean: clean
-	@rm -rf $(NAME) $(OBJS)
+	@rm -rf $(NAME)
 	@echo "$(GREEN) [Success] $(NAME) files ... (deleted)$(RESET)\n\n"
 
 re: fclean all

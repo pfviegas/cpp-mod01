@@ -6,7 +6,7 @@
 #    By: paulo <paulo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/04 11:39:39 by pviegas           #+#    #+#              #
-#    Updated: 2024/03/08 12:32:36 by paulo            ###   ########.fr        #
+#    Updated: 2024/03/10 19:17:07 by paulo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ WHITE	= \033[1;37m
 RESET 	= \033[0m
 
 # Executable name
-NAME = brain
+NAME = my_sed
 
 # Compiler options
 CXX = c++
@@ -27,7 +27,8 @@ CXXFLAGS = -Werror -Wall -Wextra -std=c++98  -g #-fsanitize=address
 
 # Paths
 SRC_DIR 	= src/
-SRC_FILES =	main.cpp
+SRC_FILES =	main.cpp \
+			My_sed.cpp
 OBJ_DIR	= obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 

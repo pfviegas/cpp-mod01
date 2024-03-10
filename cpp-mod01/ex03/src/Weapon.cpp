@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/07 16:42:42 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/08 17:21:24 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Zombie.hpp"
+#include "../include/Weapon.hpp"
 
 // Default Constructor
-Zombie::Zombie(void): name("no name")
+Weapon::Weapon(): _type("unkown")
 {
-	std::cout << this->name << ": constructor called" << std::endl;
+	std::cout << "Weapon " << this->_type << " created" << std::endl;
 }
 
 // Parameterized Constructor
-Zombie::Zombie(std::string name): name(name)
+Weapon::Weapon( std::string type ): _type(type)
 {
-	std::cout << this->name << ": constructor called" << std::endl;
+	std::cout << "Weapon " << this->_type << " created" << std::endl;
 }
 
 // Destructor
-Zombie::~Zombie(void)
+Weapon::~Weapon()
 {
-	std::cout << this->name << ": destructer called" << std::endl;
+	std::cout << "Weapon " << this->_type << " destroyed" << std::endl;
 }
 
-// Member Functions
-void Zombie::announce(void)
+// Getter
+std::string const& Weapon::getType()
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	return this->_type;
 }
-
 // Setter
-void Zombie::SetName(std::string name)
+void Weapon::setType( std::string type)
 {
-	std::cout << "zombie " << this->name << "'s name updated to " << name << std::endl;
-	this->name = name;
+	this->_type = type;
 }

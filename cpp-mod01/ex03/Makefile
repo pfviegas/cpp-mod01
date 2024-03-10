@@ -6,7 +6,7 @@
 #    By: paulo <paulo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/04 11:39:39 by pviegas           #+#    #+#              #
-#    Updated: 2024/03/07 17:54:41 by paulo            ###   ########.fr        #
+#    Updated: 2024/03/08 14:55:47 by paulo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,9 @@ CXXFLAGS = -Werror -Wall -Wextra -std=c++98  -g #-fsanitize=address
 # Paths
 SRC_DIR 	= src/
 SRC_FILES =	main.cpp \
-			Zombie.cpp \
-			zombieHorde.cpp
+			Weapon.cpp \
+			HumanA.cpp \
+			HumanB.cpp
 OBJ_DIR	= obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
@@ -52,7 +53,7 @@ clean:
 	@echo "\n$(RED) [Deleting] .o files ... (deleted)$(RESET)\n\n"
 
 fclean: clean
-	@rm -rf $(NAME) $(OBJS)
+	@rm -rf $(NAME)
 	@echo "$(GREEN) [Success] $(NAME) files ... (deleted)$(RESET)\n\n"
 
 re: fclean all
