@@ -6,7 +6,7 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:38:09 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 19:50:02 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	my_sed( std::string src_file, std::string dest_file, std::string target, std
 	std::string		line;
 	size_t			target_pos;
 
+	// open the source file
 	std::ifstream	ifs(src_file.c_str());
 	if (ifs.fail())
 	{
@@ -28,6 +29,7 @@ int	my_sed( std::string src_file, std::string dest_file, std::string target, std
 		return errno;
 	}
 	
+	// open the output file
 	std::ofstream	ofs(dest_file.c_str());
 	if (ofs.fail())
 	{
@@ -36,16 +38,16 @@ int	my_sed( std::string src_file, std::string dest_file, std::string target, std
 		return errno;
 	}
 
-	// reading with getline to keep spaces
+	// read the file line by line
 	while(getline(ifs, line))
 	{
-		// find every occurrence of the word and replace it 
+		// replace the target string with the replaceable string
 		while ((target_pos = line.find(target)) != std::string::npos && target != replaceable)
 		{
 			line.erase(target_pos, target.length());
 			line.insert(target_pos, replaceable);
 		}
-
+		// write the line to the output file
 		ofs << line;
 
 		// only add newline if the ifstream does not have eof
