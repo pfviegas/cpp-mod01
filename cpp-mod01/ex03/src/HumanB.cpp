@@ -6,7 +6,7 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:56:38 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/10 18:19:50 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 12:35:27 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ HumanB::~HumanB( void )
 }
 
 // Member function
-void HumanB::attack()const
+void HumanB::attack( void )const
 {
 	if (this->_weapon)
 		std::cout << this->_name << " attacks with their " << this->_weapon->getType()<< std::endl;

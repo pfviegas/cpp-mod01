@@ -6,13 +6,14 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:27:00 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/10 18:23:38 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 12:34:42 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Weapon.hpp"
 #include "../include/HumanA.hpp"
 #include "../include/HumanB.hpp"
+
 /*
 int main(void)
 {
@@ -41,7 +42,7 @@ int main(void)
 }
 */
 
-int main()
+int main( void )
 {
 	{
 		Weapon club = Weapon("crude spiked club");

@@ -6,7 +6,7 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:27:00 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/10 19:03:46 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 12:37:48 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main( int argc, char **argv )
 		return (2);
 	}
 
-	return my_sed(src_file, dest_file, string1, string2);
+	return (my_sed(src_file, dest_file, string1, string2));
 }
 
 /**

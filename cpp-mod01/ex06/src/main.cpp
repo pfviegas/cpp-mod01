@@ -6,27 +6,34 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:27:00 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:33:24 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 17:52:19 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "../include/HarlFilter.hpp"
 
-int main( void )
+std::string	toUpperCase(const std::string& str)
 {
-	
-	std::string text = "Hi THIS IS BRAIN";
-	std::string* stringPTR = &text; // pointer of variable text
-	std::string& stringREF = text; // Reference of variable text
-	
-	std::cout << "\nMemory Address:" << std::endl;
-	std::cout << "\ttext :\t\t" << &text << std::endl;
-	std::cout << "\tstringPTR :\t" << &stringPTR << std::endl;
-	std::cout << "\tstringREF :\t" << &stringREF << std::endl;
-	std::cout << "\nValue:" << std::endl;
-	std::cout << "\ttext :\t\t" << text << std::endl;
-	std::cout << "\tstringPTR :\t" << *stringPTR << std::endl;
-	std::cout << "\tstringREF :\t" << stringREF << std::endl;
-	return (0);
-	
+	std::string result = str;
+	for (std::size_t i = 0; i < result.length(); i++)
+	{
+		result[i] = std::toupper(result[i]);
+	}
+	return result;
+}
+
+
+int	main(int argc, char **argv)
+{
+	Harl	obj;
+
+	if (argc == 2)
+	{
+		if ((toUpperCase(argv[1]) == "DEBUG") || toUpperCase(argv[1]) == "INFO" || toUpperCase(argv[1]) == "WARNING" || toUpperCase(argv[1]) == "ERROR")
+			obj.complain(toUpperCase(argv[1]));
+		else
+			std::cout << "Error:\n" << argv[1] << " invalid" << std::endl;
+	}
+	else
+		std::cout << "Error:\nInvalid number of arguments" << std::endl;
 }

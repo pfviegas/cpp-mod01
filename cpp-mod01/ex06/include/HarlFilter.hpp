@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   My_sed.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:29:42 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:38:21 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 17:51:04 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MY_SED_H
-# define MY_SED_H
+#ifndef _HARLFILTER_HPP_
+#define _HARLFILTER_HPP_
 
-#include <string>
+#include <iostream>
+#include <cstring>
 
-int my_sed( std::string src_file, std::string dest_file, std::string string1, std::string string2 );
+class Harl
+{
+	public:
+		Harl( void );
+		~Harl( void );
+
+		void complain( std::string level );
+
+	private:
+		static std::string const _complain[4];
+	
+		void debug( void );
+		void info( void );
+		void warning( void );
+		void error( void ); 
+
+};
 
 #endif

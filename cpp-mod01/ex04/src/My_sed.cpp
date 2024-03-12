@@ -6,7 +6,7 @@
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/10 19:20:26 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 12:38:09 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "../include/My_sed.hpp"
 
-int	my_sed(std::string src_file, std::string dest_file, std::string target, std::string replaceable)
+int	my_sed( std::string src_file, std::string dest_file, std::string target, std::string replaceable )
 {
 	std::string		line;
 	size_t			target_pos;
@@ -57,5 +57,5 @@ int	my_sed(std::string src_file, std::string dest_file, std::string target, std:
 	ifs.close();
 	ofs.close();
 
-	return 0;
+	return (0);
 }

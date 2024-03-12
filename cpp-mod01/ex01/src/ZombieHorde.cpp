@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:56:38 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:35:45 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/12 12:32:29 by paulo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/HumanA.hpp"
+#include "../include/Zombie.hpp"
 
-// Constructor
-HumanA::HumanA( std::string name, Weapon& weapon ): _name(name), _weapon(weapon) 
+Zombie*	ZombieHorde( int N, std::string name )
 {
-	std::cout << this->_name << " grabs the weapon " << this->_weapon.getType() << "." << std::endl;
-}
+	Zombie* horde = new Zombie[N];
 
-// Destructor
-HumanA::~HumanA( void )
-{
-	std::cout << this->_name << " with " << this->_weapon.getType() << " weapon was destroyed" << std::endl;
-}
-
-// Member function
-void HumanA::attack( void )const
-{
-	std::cout << this->_name << " attacks with " << this->_weapon.getType() << "." << std::endl;
+	for (int i = 0; i < N; i++)
+	{
+		horde[i].SetName(name);
+	}
+	return (horde);
 }
