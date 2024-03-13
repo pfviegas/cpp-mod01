@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HarlFilter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 19:24:02 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 15:04:25 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	Harl::complain( std::string level )
 {
 	int		i;
 
-	for(i=0; i < 4; i++)
+	for(i = 0; i < 4; i++)
 	{
 		if (_complain[i] == level)
 			break;

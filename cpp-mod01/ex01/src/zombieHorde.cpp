@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:56:38 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/07 16:57:25 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 14:00:17 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ Zombie*	zombieHorde( int N, std::string name )
 	{
 		horde[i].SetName(name);
 	}
-	return horde;
+	return (horde);
 }

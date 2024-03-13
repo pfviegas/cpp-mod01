@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   My_sed.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/10 19:20:26 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 14:13:39 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	my_sed(std::string src_file, std::string dest_file, std::string target, std:
 	// reading with getline to keep spaces
 	while(getline(ifs, line))
 	{
-		// find every occurrence of the word and replace it 
+		// find every occurrence of the word and replace it if target diferent from replaceable
 		while ((target_pos = line.find(target)) != std::string::npos && target != replaceable)
 		{
 			line.erase(target_pos, target.length());
@@ -49,7 +49,6 @@ int	my_sed(std::string src_file, std::string dest_file, std::string target, std:
 		ofs << line;
 
 		// only add newline if the ifstream does not have eof
-		// otherwise an extra newline at the end of the file may be added
 		if (!ifs.eof())
 			 ofs << std::endl;
 	}

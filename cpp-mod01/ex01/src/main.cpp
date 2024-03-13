@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:27:00 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/13 11:54:41 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/03/13 15:09:18 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 int main( void )
 {
-	int num_zombie = 0;
+	int			num_zombie = 0;
+	std::string	name_zombie;
 
 	do
 	{
@@ -25,13 +26,16 @@ int main( void )
 
 		if (std::cin.fail() || num_zombie <= 0)
 		{
-			std::cin.clear();  // Limpa o estado de erro
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Descarta entrada inválida
+			std::cin.clear();  // Clean status error
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Discard invalid input
 			std::cout << "Entrada inválida. Por favor, digite um inteiro positivo.\n";
 		}
-	} while (num_zombie <= 0);	
+	} while (num_zombie <= 0);
 
-	Zombie* horde = zombieHorde(num_zombie, "pviegas");;
+	std::cout << "Introduz o nome do Zombie: ";
+	std::cin >> name_zombie;
+	
+	Zombie* horde = zombieHorde(num_zombie, name_zombie);;
 
 	for (int i = 0; i < num_zombie; i++)
 	{
@@ -40,5 +44,5 @@ int main( void )
 
 	delete [] horde;
 	
-	return 0;
+	return (0);
 }
