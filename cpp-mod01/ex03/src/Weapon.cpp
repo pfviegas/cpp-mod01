@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:35:13 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 11:56:21 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ Weapon::~Weapon( void )
 }
 
 // Getter
-std::string const& Weapon::getType()
+std::string const& Weapon::getType( void )
 {
-	return (this->_type);
+	return this->_type;
 }
 // Setter
-void Weapon::setType( std::string type)
+void Weapon::setType( std::string type )
 {
 	this->_type = type;
 }

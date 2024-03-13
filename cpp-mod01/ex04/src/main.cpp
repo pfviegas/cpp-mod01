@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:27:00 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:37:48 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 12:01:29 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <iostream>
-#include <string>
 
 #include "../include/My_sed.hpp"
 
@@ -38,27 +35,24 @@ int main( int argc, char **argv )
 }
 
 /**
- * TESTS
- * 
- *  * INVALID ARGUMENTS *
- * ./sed source ola
- * ./sed source
- * ./sed
- * ./sed source ola adeus more
- * ./sed filenotfound ola adeus
- * ./sed filewithoutpermissions ola adeus
- * 
- * * MUST WORK *
- * ./sed source ola adeus
- * ./sed source "this is" "THIS IS"
- * ./sed source ola ola
- * ./sed source ola ""
- * ./sed source " " ""
- * ./sed source "  " ""
- * ./sed source wordnotfound "NO"
- * 
- * * REPLACING NOTHING (s1) CANT GET STUCK IN INFINITE LOOP *
- * ./sed source "" ""
- * ./sed source "" ola
- * 
+	OK
+	==
+		./my_sed src_file str1 str2
+		./my_sed src_file "str 1" "str 2"
+		./my_sed src_file str1 str1
+		./my_sed src_file str1 ""
+		./my_sed src_file " " ""
+		./my_sed src_file "  " ""
+		./my_sed src_file word_not_found "Not found"
+
+	Invalid
+	=======
+		./my_sed
+		./my_sed src_file
+		./my_sed src_file str1
+		./my_sed src_file str1 str2 str3
+		./my_sed src_not_found str1 str2
+		./my_sed src_without_perm str1 str2
+		./my_sed src_file "" ""
+		./my_sed src_file "" ola
 */

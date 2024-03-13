@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paulo <paulo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:41:08 by paulo             #+#    #+#             */
-/*   Updated: 2024/03/12 12:26:15 by paulo            ###   ########.fr       */
+/*   Updated: 2024/03/13 11:31:00 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Zombie::Zombie( void )
 }
 
 // Parameterized Constructor
-Zombie::Zombie( std::string name )
+Zombie::Zombie(std::string name)
 {
-	this->SetName(name);
+	this->SetName( name );
 	std::cout << this->_name << ": constructor called" << std::endl;
 }
 
